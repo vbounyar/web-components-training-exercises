@@ -26,6 +26,11 @@
 	line-height:70%;
 }
 
+.header-textbox h1 {
+	font-size: 500%;
+	
+}
+
 .header-textbox {
 	text-align:center;
 	vertical-align:center;
