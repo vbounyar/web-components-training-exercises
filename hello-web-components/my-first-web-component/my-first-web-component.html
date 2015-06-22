@@ -1,10 +1,66 @@
 <template id="template">
     <style>
-        <!-- Add some styles here -->
+       		
+.main-badge {
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: green;
+	width: 90%;
+	height: 450px;
+	
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	
+	font-family: Arial;
+
+}
+
+.header-badge {
+	text-align: center;
+	color: white;
+	height: 100px;
+	padding-top: 15px;
+}
+
+.header-badge h1 {
+	line-height:70%;
+}
+
+.header-textbox h1 {
+	font-size: 500%;
+	
+}
+
+.header-textbox {
+	text-align:center;
+	vertical-align:center;
+	color:black;
+	background-color: white;
+	margin-right: 15px;
+	margin-left: 15px;
+	margin-top:25px;
+	height:250px;
+	padding-top: 20px;
+}
+				
     </style>
     <!-- Add HTML for your component here.
     Try adding <content></content> to project from the light DOM -->
+
+	<div class="main-badge">
+		<div class="header-badge">
+			<h1>Hello</h1>
+			<h1>My name is:</h1>
+		</div>
+		<div class="header-textbox">
+			<h1>Vanida</h1>
+		</div>
+	</div>	
+
 </template>
+
 <script>
     var createElement = function(tagName, templateId, basePrototype) {
         basePrototype = basePrototype || HTMLElement.prototype;
@@ -20,4 +76,7 @@
         });
     };
     // Initialize your component here with the above function!
+	
+	// Left the basePrototype out
+	createElement("hello-badge","template");
 </script>
