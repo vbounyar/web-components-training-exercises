@@ -9,9 +9,11 @@
     <link href="vendor/bootstrap.min.css" rel="stylesheet">
 
     <link href="vendor/docs.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
 
 	<script type="text/javascript" src="custom.js"></script>
+	
+	<link rel="import" href="components/my-first-web-component/my-first-web-component.html">
     <style>.navbar-brand { font-size: 250%; line-height: 1.2; margin: 20px 0; }</style>
 
 </head>
@@ -41,93 +43,27 @@
                 <!-- Note callout about component group -->
                 <div class="bs-callout bs-callout-warning" id="callout-btn-group-tooltips">
                     <h4>Note about component</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam amet culpa dolores hic itaque magni minima minus mollitia nemo nulla numquam odit provident, quidem ratione rem tempora ullam vitae.</p>
+                    <p>Built in one tag.</p>
                 </div>
 				
 				
                 <!-- Component title -->
                 <h2 id="hello-badge">Hello Badge</h2>
 
-<!-- Hello Badge CSS -->
-<style>				
-.main-badge {
-	margin-top: 30px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: green;
-	width: 90%;
-	height: 450px;
-	
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
-	
-	font-family: Arial;
-
-}
-
-.header-badge {
-	text-align: center;
-	color: white;
-	height: 100px;
-	padding-top: 15px;
-}
-
-.header-badge h1 {
-	line-height:70%;
-}
-
-.header-textbox h1 {
-	font-size: 500%;
-	
-}
-
-.header-textbox {
-	text-align:center;
-	vertical-align:center;
-	color:black;
-	background-color: white;
-	margin-right: 15px;
-	margin-left: 15px;
-	margin-top:25px;
-	height:250px;
-	padding-top: 20px;
-}
 				
-</style>				
                 <!-- Component description -->
 				<br/>
                 <p>Example of a Hello Badge</p>
 				
                 <!-- Component code -->
-              	<div class="main-badge">
-					<div class="header-badge">
-						<h1>Hello</h1>
-						<h1>My name is:</h1>
-					</div>
-					<div class="header-textbox">
-						<h1>Vanida</h1>
-					</div>
-				</div>			
+				<hello-badge></hello-badge>
 
 				<br/><br/>
 				
                 <!-- Component code example -->
                 <div class="highlight">
 					<pre>
-					<code class="html">
-						
-		<div class="main-badge">
-			<div class="header-badge">
-				<h1>Hello</h1>
-				<h1>My name is:</h1>
-			</div>
-			<div class="header-textbox">
-				<h1>Vanida</h1>
-			</div>
-		</div>
-						
-					</code>
+					<code class="html"><hello-badge></hello-badge></code>
 					</pre>
 				</div>
 
@@ -174,7 +110,7 @@
 
     </div>
 </footer>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
 <script>
 
 function escapeHtml(str) {

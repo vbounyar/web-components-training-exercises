@@ -3,14 +3,21 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>My first web component</title>
-    <link rel="import" href="my-first-web-component/my-first-web-component.html">
+	<link rel="import" href="my-first-web-component/my-first-web-component.html">
+	<!--
+    <link rel="import" href="/my-first-web-component/my-first-web-component.html">
+	-->
     <style>
         <!-- Style your component element here -->
+		h2{
+			color: red;
+		} <!-- purposely not work. Shadow DOM will not CSS bleed. CSSTricks, web component "Shadow Boundry" -->
     </style>
 </head>
 <body>
 <!-- Start HTML Content -->
     <!-- Create your first web component!  Add the tag and some content here -->
+	<hello-badge></hello-badge>
 <!-- End HTML Content -->
 </body>
 </html>
