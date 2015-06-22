@@ -1,0 +1,38 @@
+/** Main Styles **/
+
+
+.main-badge {
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: blue;
+	width: 90%;
+	height: 450px;
+	
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+
+}
+
+.header-badge {
+	text-align: center;
+	color: white;
+	height: 100px;
+	padding-top: 15px;
+}
+
+.header-badge h1 {
+	line-height:70%;
+}
+
+.header-textbox {
+	text-align:center;
+	vertical-align:center;
+	color:black;
+	background-color: white;
+	margin-right: 15px;
+	margin-left: 15px;
+	height:250px;
+	padding-top: 20px;
+}
