@@ -15,7 +15,9 @@
 	<script type="text/javascript" src="webcomponents.js"></script>
 	
 	<link rel="import" href="components/my-first-web-component/my-first-web-component.html">
-
+	<link rel="import" href="components/button-component/button-component.html">
+	<link rel="import" href="components/slider-component/slider-component.html">
+	
 	
     <style>.navbar-brand { font-size: 250%; line-height: 1.2; margin: 20px 0; }</style>
 
@@ -83,39 +85,14 @@
                 <!-- Component description -->
                 <p>Examle of using Shadow Button</p>
                 <!-- Component code -->
-                <div class="shadow-host"></div>
-				
-				<script>
-				
-					var shadowRoot = document.querySelector('.shadow-host').createShadowRoot();
-					shadowRoot.innerHTML += "<button>Submit</button>";
-					
-					/* Can  stick the button style in the my-first-web-component because it is also
-					in the shadowRoot */
-					shadowRoot.innerHTML += "<style>" +
-											"button {" +
-												"font-weight:bold;" + 
-												"width:100px;" +
-												"padding: 5px;" +
-												"background-color: #3498db;" +
-												"color: black;" +
-												"border-radius: 28px;" +
-												"border: #3498db;" +
-												"text-decoration: none;" +
-												"border-width: 2px;" +
-											"}" +
-											"button:active{background-color: orange;}" +  
-											"</style>";
-				</script>
+                <button-component>Submit</button-component>
 				
 				<br/><br/>
 
                 <!-- Component code example -->
                 <div class="highlight">
 					<code class="html">
-					var shadowRoot = document.querySelector('.shadow-host').createShadowRoot();
-					shadowRoot.innerHTML += "&lt;button&gt;Submit&lt;/button&gt;";
-					shadowRoot.innerHTML += "&lt;style&gt; button { font-weight:bold; } &lt;/style&gt;";
+					<button-component>Some Text</button-component>
 					</code>
 				</div>
 				
@@ -124,62 +101,30 @@
                 <h2 id="slider">Slider</h2>
 
                 <!-- Component code -->
-                <div class="slider">
-                    <img style="display: none" src="placeholder.png" />
-                    <img style="display: none" src="placeholder-gray.png" />
-                </div>
 
-                <script>
-                    var sliderHost = document.querySelector('.slider');
-                    var shadowRoot = sliderHost.createShadowRoot();
-                    var images = sliderHost.querySelectorAll('img');
-                    var counter = 0;
-
-                    shadowRoot.innerHTML += '<content select="img"></content>';
-
-                    window.setInterval(function() {
-                        images[counter].style.display = 'none';
-                        if(counter < images.length -1) {
-                            counter++;
-                        } else {
-                            counter = 0;
-                        }
-                        images[counter].style.display = 'block';
-                    }, 1000);
-                </script>
 
 				
                 <!-- Component description -->
 				<br/>
                 <p>Example of a slider</p>
+
 				
-				
+				<slider-component>
+					<img src="placeholder.png" />
+					<img src="placeholder-gray.png" />
+					<img src="placeholder-square.png" />
+				</slider-component>
+
 				<br/><br/>
 				<!-- Component code example -->
                 <div class="highlight">
 					<code class="html">
-                    var sliderHost = document.querySelector('.slider');
-                    var shadowRoot = sliderHost.createShadowRoot();
-                    var images = sliderHost.querySelectorAll('img');
-                    var counter = 0;
-
-                    shadowRoot.innerHTML += '<content select="img"></content>';
-
-                    window.setInterval(function() {
-                        images[counter].style.display = 'none';
-                        if(counter < images.length -1) {
-                            counter++;
-                        } else {
-                            counter = 0;
-                        }
-                        images[counter].style.display = 'block';
-                    }, 1000);
+					<slider-component>Some image tags</slider-component>
 					</code>
 				</div>
-
 				<br/><br/>
 
-
+				
             </div>
         </div>
 
