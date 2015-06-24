@@ -30,19 +30,7 @@
             var clone = document.importNode(template, true);
             shadowRoot.appendChild(clone);
 			
-			// Must have the 'slider-component' so it only selects the images in the slider component
-			var images = document.querySelectorAll('slider-component img');
-			var counter = 0;
-			
-			window.setInterval(function() {
-				images[counter].style.display = 'none';
-				if(counter < images.length -1) {
-					counter++;
-				} else {
-					counter = 0;
-				}
-				images[counter].style.display = 'block';
-			}, 1000);
+
 			
 	
 	
@@ -55,6 +43,20 @@
 	
 	// Left the basePrototype out
 	createElement("slider-component","template");
+	
+	// Must have the 'slider-component' so it only selects the images in the slider component
+	var images = document.querySelectorAll('slider-component img');
+	var counter = 0;
+	
+	window.setInterval(function() {
+		images[counter].style.display = 'none';
+		if(counter < images.length -1) {
+			counter++;
+		} else {
+			counter = 0;
+		}
+		images[counter].style.display = 'block';
+	}, 1000);
 	
 	
    
