@@ -1,0 +1,30 @@
+<template id="template">
+    <style>
+	.tablist{list-style:none;}
+	.tablist ::content a{float:left; margin-right:0.13em;}
+	
+	.tablist ::content a {display:block; padding:0 1em; text-decoration:none; border:0.06em solid #000; border-bottom:0; font:bold 0.88em/2em arial,geneva,helvetica,sans-serif; color:#000; background-color:#ccc;  /* CSS 3 elements */ webkit-border-top-right-radius:0.50em; -webkit-border-top-left-radius:0.50em; -moz-border-radius-topright:0.50em; -moz-border-radius-topleft:0.50em; border-top-right-radius:0.50em; border-top-left-radius:0.50em;} 
+	
+	
+	.tablist ::content a:hover {background:#3cf;  color:#fff; text-decoration:none; }
+	.tablist #current ::content a { background-color: #777; color: #fff; } 
+	.tablist #current ::content a:hover { background: #39C; }
+    </style>
+		
+    <!-- Add HTML for your component here.
+    Try adding <content></content> to project from the light DOM -->
+
+	<div class="tablist">
+		<content select="a"></content>	
+	</div>
+
+</template>
+<script src="../createCustomElement.js"></script>
+<script>
+
+	// Left the basePrototype out
+	window.myTabs = createElement("tabs-component","template");
+	
+	
+   
+</script>

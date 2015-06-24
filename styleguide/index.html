@@ -17,7 +17,7 @@
 	<link rel="import" href="components/my-first-web-component/my-first-web-component.html">
 	<link rel="import" href="components/button-component/button-component.html">
 	<link rel="import" href="components/slider-component/slider-component.html">
-	
+	<link rel="import" href="components/tabs-component/tabs-component.html">
 	
     <style>.navbar-brand { font-size: 250%; line-height: 1.2; margin: 20px 0; }</style>
 
@@ -102,9 +102,9 @@
 
                 <!-- Component code -->
 				<slider-component>
-					<img style="display:none" src="placeholder.png" />
-					<img style="display:none" src="placeholder-gray.png" />
-					<img style="display:none" src="placeholder-square.png" />				
+					<img src="placeholder.png" />
+					<img src="placeholder-gray.png" />
+					<img src="placeholder-square.png" />				
 				</slider-component>
 
 				
@@ -116,30 +116,29 @@
 				<!-- Component code example -->
                 <div class="highlight">
 					<code class="html">
-					<slider-component>Some image tags</slider-component>
+				<slider-component>
+					<img src="placeholder.png" />
+					<img src="placeholder-gray.png" />
+					<img src="placeholder-square.png" />				
+				</slider-component>
 					</code>
 				</div>
 				<br/><br/>
 				
 				
 				<!-- Component title -->
-                <h2 id="slider">Shadow Tab</h2>
+                <h2 id="shadow-tabs">Shadow Tab</h2>
 
-                <!-- Component code -->
-				<style>
-				
-				</style>
-				
-				<ul class="tablist"> 
-					<li><a href="#">CSS 3</a></li> 
-					<li id="current"><a href="#">Tabs</a></li> 
-					<li><a href="#">For</a></li> 
-					<li><a href="#">Menus</a></li> 
-				</ul>
-				
+                <!-- Component code -->		
+				<tabs-component>
+					<a href="#">Tab 1</a>
+					<a href="#">Tab 2</a>
+					<a href="#">Tab 3</a>
+					<a href="#">Tab 4</a>
+				</tabs-component>
 				
                 <!-- Component description -->
-				<br/>
+				<br/><br/>
                 <p>Example of a Tab</p>
 
 
@@ -147,7 +146,12 @@
 				<!-- Component code example -->
                 <div class="highlight">
 					<code class="html">
-					
+				<tabs-component>
+					<a href="#">Tab 1</a>
+					<a href="#">Tab 2</a>
+					<a href="#">Tab 3</a>
+					<a href="#">Tab 4</a>
+				</tabs-component>
 					</code>
 				</div>
 				<br/><br/>
@@ -167,6 +171,7 @@
                             <li class=""><a href="#hello-badge">Hello Badge</a></li>
                             <li class=""><a href="#shadow-btn">Shadow Button</a></li>
 							<li class=""><a href="#slider">Slider</a></li>
+							<li class=""><a href="#shadow-tabs">Shadow Tabs</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -203,10 +208,7 @@ codeNodes.forEach(function(el) { hljs.highlightBlock(el); });
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-
 <script src="vendor/bootstrap.min.js"></script>
-
-
 
 <script src="vendor/docs.min.js"></script>
 
